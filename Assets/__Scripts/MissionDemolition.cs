@@ -117,6 +117,10 @@ public class MissionDemolition : MonoBehaviour {
                 FollowCam.POI = null;
                 uitButton.text = "Show Castle";
                 break;
+            case "Show Castle":
+                FollowCam.POI = S.castle;
+                uitButton.text = "Show Both";
+                break;
             case "Show Both":
                 FollowCam.POI = GameObject.Find("ViewBoth");
                 uitButton.text = "Show Slingshot";
