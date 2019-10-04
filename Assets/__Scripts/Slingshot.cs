@@ -59,14 +59,13 @@ public class Slingshot : MonoBehaviour {
         projectile = Instantiate( prefabProjectile ) as GameObject;
         //start it at launchpoint
         projectile.transform.position = launchPos;
-        //set it to isKinematic for now
         projectile.GetComponent<Rigidbody>().isKinematic = true;
 
         //set it to isKinematic for now
         projectileRigidbody = projectile.GetComponent<Rigidbody>();
         projectileRigidbody.isKinematic = true;
     }
-
+    
     void Update()
     {
         //if slingshot is not in aimingMode, don't run
@@ -92,7 +91,7 @@ public class Slingshot : MonoBehaviour {
         //move the projectile to this new position
         Vector3 projPos = launchPos + mouseDelta;
         projectile.transform.position = projPos;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonUp(0))
         {
             //the mouse has been released
             aimingMode = false;

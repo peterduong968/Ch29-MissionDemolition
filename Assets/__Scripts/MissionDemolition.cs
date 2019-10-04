@@ -50,7 +50,6 @@ public class MissionDemolition : MonoBehaviour {
 
         //destroy old projectiles if they exist
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Projectile");
-        //NOT SURE IF THIS IS RIGHT. PG 714
         foreach (GameObject pTemp in gos)
         {
             Destroy(pTemp);
